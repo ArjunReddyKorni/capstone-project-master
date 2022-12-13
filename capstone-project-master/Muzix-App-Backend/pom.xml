@@ -36,8 +36,8 @@
 		<module>Search-Service</module>
 		<module>User-Service</module>
 		<module>authentication</module>
-		<module>EurekaServer</module>
 		<module>ApiGateWay</module>
+		<module>EurekaServer</module>
 	</modules>
 
 	<build>

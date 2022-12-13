@@ -1,0 +1,1 @@
+insert into user values("Arjun@127","pass@127");

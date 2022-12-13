@@ -12,4 +12,5 @@ public interface UserProxy {
     @PostMapping("user/v1/register")
     ResponseEntity saveUser(@RequestBody User user);
 
+
 }

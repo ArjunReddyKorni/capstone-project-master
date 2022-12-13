@@ -36,6 +36,12 @@ public class Movie {
         this.keyWords = keyWords;
     }
 
+    public Movie(int id,String name){
+        this.id = id;
+        this.name = name;
+    }
+
+
     public List<String> getKeyWords() {
         return keyWords;
     }

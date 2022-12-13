@@ -10,9 +10,9 @@
         <module name="Movie-Service" />
         <module name="Search-Service" />
         <module name="ApiGateWay" />
+        <module name="authentication" />
         <module name="Favourite-List-Service" />
         <module name="User-Service" />
-        <module name="authentication" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

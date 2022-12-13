@@ -2,6 +2,7 @@ package com.niit.userService.UserService.services;
 
 import com.niit.userService.UserService.exception.UserAlreadyExistsException;
 import com.niit.userService.UserService.exception.UserNotFoundException;
+import com.niit.userService.UserService.models.Favourite;
 import com.niit.userService.UserService.models.User;
 
 public interface UserService {
@@ -11,5 +12,7 @@ public interface UserService {
     User updateUser(String email, User user) throws UserNotFoundException;
 
     boolean deleteUser(String email) throws UserNotFoundException;
+
+
 
 }

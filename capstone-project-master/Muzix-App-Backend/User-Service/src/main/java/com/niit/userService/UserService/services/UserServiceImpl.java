@@ -4,6 +4,7 @@ import com.niit.MovieService.domain.Movie;
 import com.niit.userService.UserService.exception.UserAlreadyExistsException;
 import com.niit.userService.UserService.exception.UserNotFoundException;
 import com.niit.userService.UserService.models.User;
+import com.niit.userService.UserService.proxy.FavouriteProxy;
 import com.niit.userService.UserService.proxy.UserProxy;
 import com.niit.userService.UserService.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,8 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     private UserProxy userProxy;
+    @Autowired
+    private FavouriteProxy favouriteProxy;
 
 
     public UserServiceImpl(UserRepository userRepository) {
@@ -35,6 +38,8 @@ public class UserServiceImpl implements UserService{
         if (!(savedUser.getEmail().isEmpty())){
             ResponseEntity rs = userProxy.saveUser(user);
             System.out.println(rs.getBody());
+            ResponseEntity responseEntity = favouriteProxy.createFavouriteAccount(user.getEmail());
+            System.out.println(responseEntity.getBody());
         }
         return savedUser;
     }
